@@ -1,0 +1,3 @@
+#Ads.txt docs.taobao.com 20190621
+
+google.com, pub-1087484447886876, DIRECT
