@@ -218,7 +218,7 @@ ul {
 }
 
 a, a:active {
-  color: #953581;
+  color: #ee4c2f;
   text-decoration: none
 }
 
@@ -422,7 +422,7 @@ header .nav-list-item a {
 }
 
 .post-content a {
-  color: #953581;
+  color: #ee4c2f;
   word-break: break-all;
 }
 
@@ -773,13 +773,27 @@ footer .copyright a:hover {
   font-style: normal
 }
 
+#chat-button {
+    cursor: pointer;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    display: none;
+    border-radius: 50%;
+    outline: none;
+    z-index: 99999;
+}
+#chat-button img {
+    width: 40px;
+}
+
 #back-to-top {
     cursor: pointer;
     position: fixed;
-		background-color: #953581;
+		background-color: #ee4c2f;
     bottom: 20px;
     right: 20px;
-    display: inline;
+    display: none;
 		padding: 6px 13px;
     border-radius: 50%;
     font-size: 14px;
