@@ -8,6 +8,8 @@ gtag('config', 'UA-142407104-2');</script></head><body><div class="wrap"><header
 <hr>
 <h2 id="◼︎-서비스-이용-방법"><a href="#◼︎-서비스-이용-방법" class="headerlink" title="◼︎ 서비스 이용 방법"></a>◼︎ 서비스 이용 방법</h2><center><a href="https://www.taobaotalk.com/kakao/" target="_blank"><img src="https://hellotblog.files.wordpress.com/2019/04/ttmkt-logo-girl-round-02-120x120.png" style="max-width:100%;" alt="타오바오톡(TaobaoTalk)"></a></center>
 
+<center>현재 환율 (기준일: <span class="post-year"></span>-<span class="post-month-digits"></span>-<span class="post-date-digits"></span>) : 1 CNY = <span id="price"></span> KRW</center>
+
 <hr>
 <h3 id="1-결제-QR-코드-송신"><a href="#1-결제-QR-코드-송신" class="headerlink" title="(1) 결제 QR 코드 송신"></a>(1) 결제 QR 코드 송신</h3><p>서비스에 필요한 정보를 <strong>타오바오톡(TaobaoTalk) <a href="https://www.taobaotalk.com/kakao/" target="_blank">카카오톡</a></strong>을 통해 송신합니다.</p>
 <div style="background-color:#f8f8f8; padding:10px 20px;">
@@ -44,6 +46,15 @@ gtag('config', 'UA-142407104-2');</script></head><body><div class="wrap"><header
 <center>저작권자 ⓒ 타오바오톡 ( <a href="https://www.taobaotalk.com/kakao/" target="_blank">www.taobaotalk.com</a> ) | 무단 전재 및 재배포 금지</center>
 
 <hr>
+<script type="text/javascript">
+  // var url = 'https://jsonplaceholder.typicode.com/users/'
+  // var url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWUSD'
+  var url = 'https://quotation-api-cdn.dunamu.com/v1/forex/recent?codes=FRX.KRWCNY'
+  fetch(url)
+  .then(res => res.json())
+  .then(res => res.map(data => data.basePrice))
+  .then(price => document.getElementById("price").innerHTML = price);
+</script>
 </div></article></div></main><footer><div class="copyright"><a id="chat-button" href="https://www.taobaotalk.com/kakao/" target="_blank"><img src="https://hellotblog.files.wordpress.com/2019/07/kakaotalk-chat-button-100x100.png"></a><a id="back-to-top" href="#" title="Go To Top"><i class="fas fa-chevron-up"></i></a><p>© 2019 TaobaoTalk</p><script src="/js/jquery-3.4.1.min.js"></script><script src="/js/date.js"></script><script src="/js/main.js"></script><script src="/js/all.js"></script><script src="/js/clipboard-1.5.12.min.js"></script><script>new Clipboard('.copyContent');
 mouseon();
 </script></div></footer></div></body></html>
